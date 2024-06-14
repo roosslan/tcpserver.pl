@@ -19,7 +19,7 @@ LocalPort => '113',
 Proto => 'tcp',
 Listen => 5,
 Reuse => 1
-) or die "ERROR in Socket Creation : $!\n";
+) or die "ERROR in socket creation : $!\n";
  
 print "SERVER Waiting for client connection on port 113\n";
  
@@ -32,7 +32,7 @@ $client_socket = $socket->accept();
 $peer_address = $client_socket->peerhost();
 $peer_port = $client_socket->peerport();
  
-print "Accepted New Client Connection From : $peeraddress, $peerport\n ";
+print "Accepted new client connection from : $peeraddress, $peerport\n ";
  
 # read operation on the newly accepted client
 $data = <$client_socket>;
